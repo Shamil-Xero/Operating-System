@@ -28,20 +28,10 @@ void fcfs(int requests[], int n, int head)
 
 int main()
 {
-    int n, head;
-
-    printf("Enter the number of requests: ");
-    scanf("%d", &n);
-
-    int requests[n];
-    printf("Enter the requests:\n");
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &requests[i]);
-    }
-
-    printf("Enter the initial head position: ");
-    scanf("%d", &head);
+    // Predefined inputs
+    int requests[] = {98, 183, 41, 122, 14, 124, 65, 67};  // Predefined disk requests
+    int n = sizeof(requests) / sizeof(requests[0]);  // Number of requests
+    int head = 53;  // Predefined initial head position
 
     // Call FCFS algorithm
     fcfs(requests, n, head);

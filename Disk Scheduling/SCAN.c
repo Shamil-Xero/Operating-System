@@ -89,28 +89,14 @@ void scan(int requests[], int n, int head, int disk_size, int direction)
 
 int main()
 {
-    int n, head, disk_size, direction;
+    // Predefined inputs
+    int requests[] = {98, 183, 41, 122, 14, 124, 65, 67};  // Predefined disk requests
+    int n = sizeof(requests) / sizeof(requests[0]);  // Number of requests
+    int head = 53;  // Predefined initial head position
+    int disk_size = 200;  // Predefined disk size
+    int direction = 1;  // Predefined direction (1 for right)
 
-    printf("Enter the number of requests: ");
-    scanf("%d", &n);
-
-    int requests[n];
-    printf("Enter the requests:\n");
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &requests[i]);
-    }
-
-    printf("Enter the initial head position: ");
-    scanf("%d", &head);
-
-    printf("Enter the disk size: ");
-    scanf("%d", &disk_size);
-
-    printf("Enter the direction (0 for left, 1 for right): ");
-    scanf("%d", &direction);
-
-    // Call SCAN algorithm
+    // Call SCAN algorithm with predefined inputs
     scan(requests, n, head, disk_size, direction);
 
     return 0;
